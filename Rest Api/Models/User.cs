@@ -14,9 +14,6 @@ namespace Rest_Api.Models
         public int Id { get; set; }
 
         [Required]
-        public Role Role { get; set; }
-
-        [Required]
         public string Firstname { get; set; }
 
         public string Middlename { get; set; }
@@ -43,10 +40,9 @@ namespace Rest_Api.Models
         {
         }
 
-        public User(int id, Role role, string firstname, string middlename, string lastname, string address, string phone, string email, string password, bool confirmed)
+        public User(int id, string firstname, string middlename, string lastname, string address, string phone, string email, string password, bool confirmed)
         {
             Id = id;
-            Role = role;
             Firstname = firstname;
             Middlename = middlename;
             Lastname = lastname;
